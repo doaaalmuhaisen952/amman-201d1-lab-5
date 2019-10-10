@@ -14,7 +14,7 @@ function sum(a, b) { //eslint-disable-line
 //given 4,7 should return [11 , the sum of 4 and 7 is 11]
 
 var c= a+b ;
-return  ['The sum of '+ a +'and '+ b +'is '+c ];
+return  [c,'The sum of '+ a +'and '+ b +'is '+c ];
 }
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -33,7 +33,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b) { //eslint-disable-line
 
     var c = a*b ;
-    return ['The sum of '+ a +'and '+ b +'is '+ c];
+    return [c,'The sum of '+ a +'and '+ b +'is '+ c];
 }
     // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -51,11 +51,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-}
 
+function sumAndMultiply(a,b,c){  //eslint-disable-line
+      var H =sum(a,b);
+      var R =sum(H[0],c)
+      var D = multiply(a,b)
+      var O = multiply(D[0],c)
+     return [R[0],O[0],a+' and '+b + ' and ' + c +' sum to ' + R[0] ,'The product of '+ a +' and '+ b +' and '+ 5 +' is '+ O[0] ];
+    
+    }
+    
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
